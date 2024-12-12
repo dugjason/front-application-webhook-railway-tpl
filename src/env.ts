@@ -32,4 +32,9 @@ export const env = createEnv({
    * explicitly specify this option as true.
    */
   emptyStringAsUndefined: true,
+
+  /*
+   * Skips validation during build - prevents Docker from failing
+   */
+  skipValidation: process.env.NODE_ENV !== 'production',
 });
