@@ -3,6 +3,8 @@ import { z } from 'zod';
 
 export const env = createEnv({
   server: {
+    // App
+    PORT: z.string().min(1).default('3000'),
     // Front
     FRONT_APP_SECRET: z.string().min(1),
     // Redis

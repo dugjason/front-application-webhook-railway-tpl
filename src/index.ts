@@ -3,6 +3,7 @@ import { zValidator } from '@hono/zod-validator'
 import { Hono } from 'hono'
 import { logger } from 'hono/logger'
 
+import { env } from './env'
 import { handleChallenge } from './middleware/handle-challenge'
 import { validateIntegrity } from './middleware/validate-integrity'
 import { frontEventsQueue } from './queue/queue'
@@ -67,8 +68,8 @@ app.post('/ingest', zValidator('json', frontPayloadSchema), async (c) => {
  * App initialization
  */
 
-const port = 3000
-console.log(`Server is running on http://localhost:${port}`)
+const port = env.PORT ? Number(env.PORT) : 3000;
+console.log(`Server is running on port ${port}`)
 
 // Ensure all BullMQ workers are initialized and running before starting the server
 initializeWorkers()
