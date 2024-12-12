@@ -13,7 +13,7 @@ This template provides a robust foundation for handling events received from an 
 
 ## Quick Start
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/YOUR-TEMPLATE-ID)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.app/template/Ry0Mh9?referralCode=ANYK2b)
 
 1. Click the "Deploy on Railway" button to deploy the template to [Railway](https://railway.app).
 
