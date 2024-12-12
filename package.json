@@ -1,0 +1,44 @@
+{
+  "name": "front-application-webhook-railway-tpl",
+  "version": "0.1.0",
+  "author": "Jason Dugdale <jason@jasondugdale.com>",
+  "license": "MIT",
+  "description": "Railway.app Template for managing Front.com Application Webhook payloads",
+  "homepage": "https://github.com/dugjason/front-application-webhook-railway-tpl",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dugjason/front-application-webhook-railway-tpl.git"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsx watch --env-file .env src/index.ts",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.7",
+    "@hono/zod-validator": "0.4.1",
+    "@t3-oss/env-core": "^0.11.1",
+    "bullmq": "^5.34.0",
+    "hono": "^4.6.13",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsup": "8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "5.7.2"
+  },
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "splitting": false,
+    "sourcemap": true,
+    "clean": true,
+    "format": [
+      "esm"
+    ]
+  }
+}
