@@ -8,4 +8,5 @@ export const connection: RedisOptions = {
   port: Number(env.REDIS_PORT),
   username: env.REDIS_USER,
   password: env.REDIS_PASSWORD,
+  family: 0,
 };
