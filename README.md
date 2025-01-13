@@ -21,6 +21,8 @@ This template provides a robust foundation for handling events received from an 
 
 3. Ensure you set your `FRONT_APP_SECRET` environment variable in Railway.
 
+4. Once deployed, click in to the **Front Application Webhook** GitHub resource -> **Settings tab** -> **Networking**, then copy the Public Networking URL for use in your Front Application Webhook settings.
+
 ### For local development:
 
 Copy the `.env.example` file to `.env` and set your `FRONT_APP_SECRET` environment variable, and your Redis credentials. 
